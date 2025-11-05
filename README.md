@@ -58,17 +58,29 @@ El propio ejercicio ya se resolvió con la utilidad quaternion.
 
 ### 8. ¿Como puedes averiguar la matriz de proyección en perspectiva que se ha usado para proyectar la escena al último frame renderizado?.
 
+Se puede obtener en cualquier script mediante la siguiente línea de código:
+
+```cs
+Matrix4x4 projectionMatrix = camera.projectionMatrix;
+```
+
 ---
 
 ### 9. ¿Como puedes averiguar la matriz de proyección en perspectiva ortográfica que se ha usado para proyectar la escena al último frame renderizado?.
+
+Si `camera.orthographic = true`, `camera.projectionMatrix` devolverá la matriz ortográfica correspondiente (con `camera.orthographicSize`, aspect, near/far).
 
 ---
 
 ### 10. ¿Cómo puedes obtener la matriz de transformación entre el sistema de coordenadas local y el mundial?.
 
+Con `Matrix4x4 M = transform.localToWorldMatrix;` conseguimos transformar las coordenadas locales de un punto a coordenadas del mundo. La forma inversa sería con `transform.worldToLocalMatrix`.
+
 ---
 
 ### 11. Cómo puedes obtener la matriz para cambiar al sistema de referencia de vista.
+
+Con `Matrix4x4 V = camera.worldToCameraMatrix;` conseguimos transformar las coordenadas locales de un punto a coordenadas de la cámara. La forma inversa sería con `camera.cameraToWorldMatrix`.
 
 ---
 
