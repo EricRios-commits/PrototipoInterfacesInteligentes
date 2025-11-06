@@ -126,6 +126,8 @@ Posteriormente, deberemos incluir la posición espcificada (3, 1, 1). Podríamos
 
 ### 16. Crea una escena en Unity con los siguientes elementos: cámara principal, plano base (como suelo) y tres cubos de distinto color (rojo, verde, azul) colocados en posiciones distintas en el espacio. Realiza un pequeño script de depuración adjunto a la cámara que permita visualizar en consola o en pantalla las matrices de transformación (Model, View, Projection) y sus resultados sobre un vértice de cada cubo.
 
+Realizado con [CameraMatrixDebugger](scripts/CameraMatrixDebugger.cs) (Código relativamente sucio)
+![img](img/ej-16.png)
 ---
 
 ### 17. Dibujar en un programa de dibujo el recorrido de las coordenadas de un vértice específico del cubo rojo:
@@ -133,7 +135,14 @@ Posteriormente, deberemos incluir la posición espcificada (3, 1, 1). Podríamos
 Local → World → Camera/View → Clip → NDC → Viewport.
 ```
 ### Indicar cómo cambia su valor en cada espacio. Aplicar la transformación manualmente a un punto (por ejemplo, el vértice (0.5, 0.5, 0.5)) y registrar los resultados paso a paso.
-
+![it really is my passion](img/graphicdesign.png)
 ---
 
 ### 18. Mover o rotar uno de los cubos y mostrar cómo cambian los valores de su matriz de modelo. Rotar la cámara y mostrar cómo se modifica la matriz de vista. Cambiar entre proyección ortográfica y perspectiva y comparar las diferencias numéricas en la matriz de proyección.
+
+#### Rotación de cubo:
+![rot](img/rot_cube.gif)
+#### Rotación de cámara:
+![rotcam](img/rot_cam.gif)
+### Cambio de proyección
+![pro](img/projection.gif)
